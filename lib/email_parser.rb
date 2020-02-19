@@ -9,7 +9,7 @@ class EmailAddressParser
         @emails = emails
     end
     def parse
-        string_no_commas = @emails.tr(",","")
+        string_no_commas = @emails.delete ","
         array_no_commas = string_no_commas.split(" ")
         array_no_commas.uniq
     end
